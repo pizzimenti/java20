@@ -4,8 +4,8 @@
         <name><![CDATA[bands]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>109.00</x>
-            <y>146.00</y>
+            <x>34.00</x>
+            <y>60.00</y>
         </location>
         <size>
             <width>163.00</width>
@@ -23,9 +23,10 @@
         </SQLField>
         <SQLField>
             <name><![CDATA[name]]></name>
-            <type><![CDATA[VARCHAR(size)]]></type>
+            <type><![CDATA[VARCHAR]]></type>
             <uid><![CDATA[EC63405D-40DB-4E3F-8AB9-71C51289ED3C]]></uid>
         </SQLField>
+        <labelWindowIndex><![CDATA[2]]></labelWindowIndex>
         <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[12E21ADA-557F-4BCC-B8C1-C6AF31B07E72]]></uid>
     </SQLTable>
@@ -33,8 +34,8 @@
         <name><![CDATA[bands_venues]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>343.00</x>
-            <y>197.00</y>
+            <x>233.00</x>
+            <y>111.00</y>
         </location>
         <size>
             <width>163.00</width>
@@ -76,14 +77,16 @@
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[003B2578-8E43-408F-BD41-13539AC95EC5]]></uid>
         </SQLField>
+        <labelWindowIndex><![CDATA[1]]></labelWindowIndex>
+        <ui.treeExpanded><![CDATA[1]]></ui.treeExpanded>
         <uid><![CDATA[26D8D244-D0FC-4C6C-B2FF-1221C5A60BEA]]></uid>
     </SQLTable>
     <SQLTable>
         <name><![CDATA[venues]]></name>
         <schema><![CDATA[]]></schema>
         <location>
-            <x>110.00</x>
-            <y>292.00</y>
+            <x>35.00</x>
+            <y>206.00</y>
         </location>
         <size>
             <width>163.00</width>
@@ -101,7 +104,7 @@
         </SQLField>
         <SQLField>
             <name><![CDATA[name]]></name>
-            <type><![CDATA[VARCHAR(size)]]></type>
+            <type><![CDATA[VARCHAR]]></type>
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[B8F8EA69-B330-48A1-83F0-CDB2FF824D75]]></uid>
         </SQLField>
@@ -122,16 +125,16 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[867.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[744.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[0]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[312.000000]]></SourceSidebarWidth>
         <uid><![CDATA[2655DDB9-E114-4544-A031-D4C7F2E701C7]]></uid>
-        <windowHeight><![CDATA[796.000000]]></windowHeight>
-        <windowLocationX><![CDATA[401.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[145.000000]]></windowLocationY>
+        <windowHeight><![CDATA[1023.000000]]></windowHeight>
+        <windowLocationX><![CDATA[935.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[4.000000]]></windowLocationY>
         <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[1144.000000]]></windowWidth>
+        <windowWidth><![CDATA[745.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>
