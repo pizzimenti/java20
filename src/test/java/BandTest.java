@@ -12,13 +12,13 @@ public class BandTest {
     assertEquals(0, Band.all().size());
   }
 
-  // @Test
-  // public void equals_returnsTrueIfNamesAretheSame() {
-  //   Band newBand = new Band("Cold Play");
-  //   Band anotherBand = new Band("Cold Play");
-  //   assertTrue(newBand.equals(anotherBand));
-  // }
-  //
+  @Test
+  public void equals_returnsTrueIfNamesAretheSame() {
+    Band newBand = new Band("Cold Play");
+    Band anotherBand = new Band("Cold Play");
+    assertTrue(newBand.equals(anotherBand));
+  }
+
   // @Test
   // public void save_returnTrueIfNamesAreSame() {
   //   Band newBand = new Band("Cold Play");
