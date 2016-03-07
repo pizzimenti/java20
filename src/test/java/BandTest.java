@@ -14,14 +14,14 @@ public class BandTest {
 
   @Test
   public void equals_returnsTrueIfNamesAretheSame() {
-    Band newBand = new Band("Cold Play");
-    Band anotherBand = new Band("Cold Play");
+    Band newBand = new Band("Coldplay");
+    Band anotherBand = new Band("Coldplay");
     assertTrue(newBand.equals(anotherBand));
   }
 
   @Test
   public void save_returnTrueIfNamesAreSame() {
-    Band newBand = new Band("Cold Play");
+    Band newBand = new Band("Coldplay");
     newBand.save();
     Band savedBand = Band.all().get(0);
     assertEquals(newBand.getId(), savedBand.getId());
@@ -29,30 +29,30 @@ public class BandTest {
 
   @Test
   public void find_findsObjectInDatabaseById() {
-    Band newBand = new Band("Cold Play");
+    Band newBand = new Band("Coldplay");
     newBand.save();
     Band savedBand = Band.find(newBand.getId());
     assertTrue(newBand.equals(savedBand));
   }
-  
-  // @Test
-  // public void addVenue_addsVenueToBand() {
-  //   Venue myVenue = new Venue("Rose Quarter");
-  //   myVenue.save();
-  //   Band myBand = new Band("Clean the litter box");
-  //   myBand.save();
-  //   myBand.addVenue(myVenue.getId());
-  //   Venue savedVenue = myBand.getVenues().get(0);
-  //   assertTrue(myVenue.equals(savedVenue));
-  // }
-  //
+
+  @Test
+  public void addVenue_addsVenueToBand() {
+    Venue myVenue = new Venue("Rose Quarter");
+    myVenue.save();
+    Band myBand = new Band("Coldplay");
+    myBand.save();
+    myBand.addVenue(myVenue.getId());
+    Venue savedVenue = myBand.getVenues().get(0);
+    assertTrue(myVenue.equals(savedVenue));
+  }
+
   // @Test
   // public void getVenues_getsVenuesFromBand() {
   //   Venue myVenue = new Venue("Rose Quarter");
   //   myVenue.save();
   //   Venue myVenueTwo = new Venue("Expo Center");
   //   myVenueTwo.save();
-  //   Band myBand = new Band("Cold Play");
+  //   Band myBand = new Band("Coldplay");
   //   myBand.save();
   //   Band myBandTwo = new Band("Pink Martini");
   //   myBandTwo.save();

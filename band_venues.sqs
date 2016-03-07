@@ -17,7 +17,7 @@
             <type><![CDATA[INTEGER]]></type>
             <primaryKey>1</primaryKey>
             <autoIncrement><![CDATA[1]]></autoIncrement>
-            <forcedUnique><![CDATA[1]]></forcedUnique>
+            <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[9F902E2B-E5A6-420D-9F48-D9543048B8BF]]></uid>
             <unique><![CDATA[0]]></unique>
         </SQLField>
@@ -52,28 +52,12 @@
         <SQLField>
             <name><![CDATA[band_id]]></name>
             <type><![CDATA[INTEGER]]></type>
-            <referencesField>id</referencesField>
-            <referencesTable>bands</referencesTable>
-            <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[bands]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
-            <destinationCardinality>0</destinationCardinality>
-            <referencesFieldUID><![CDATA[9F902E2B-E5A6-420D-9F48-D9543048B8BF]]></referencesFieldUID>
-            <referencesTableUID><![CDATA[12E21ADA-557F-4BCC-B8C1-C6AF31B07E72]]></referencesTableUID>
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[C75995FD-5E28-4F55-BF51-C176A81B32B7]]></uid>
         </SQLField>
         <SQLField>
             <name><![CDATA[venue_id]]></name>
             <type><![CDATA[INTEGER]]></type>
-            <referencesField>id</referencesField>
-            <referencesTable>venues</referencesTable>
-            <referencesField><![CDATA[id]]></referencesField>
-            <referencesTable><![CDATA[venues]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
-            <destinationCardinality>0</destinationCardinality>
-            <referencesFieldUID><![CDATA[66BA3C30-53B0-41C5-885A-3654A2D92E70]]></referencesFieldUID>
-            <referencesTableUID><![CDATA[C1151918-0307-4B58-A0ED-522B1EB18F34]]></referencesTableUID>
             <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[003B2578-8E43-408F-BD41-13539AC95EC5]]></uid>
         </SQLField>
@@ -98,7 +82,7 @@
             <type><![CDATA[INTEGER]]></type>
             <primaryKey>1</primaryKey>
             <autoIncrement><![CDATA[1]]></autoIncrement>
-            <forcedUnique><![CDATA[1]]></forcedUnique>
+            <forcedUnique><![CDATA[0]]></forcedUnique>
             <uid><![CDATA[66BA3C30-53B0-41C5-885A-3654A2D92E70]]></uid>
             <unique><![CDATA[0]]></unique>
         </SQLField>
@@ -125,16 +109,16 @@
         <overviewPanelHidden><![CDATA[0]]></overviewPanelHidden>
         <pageBoundariesVisible><![CDATA[0]]></pageBoundariesVisible>
         <PageGridVisible><![CDATA[0]]></PageGridVisible>
-        <RightSidebarWidth><![CDATA[744.000000]]></RightSidebarWidth>
+        <RightSidebarWidth><![CDATA[723.000000]]></RightSidebarWidth>
         <sidebarIndex><![CDATA[0]]></sidebarIndex>
         <snapToGrid><![CDATA[0]]></snapToGrid>
         <SourceSidebarWidth><![CDATA[312.000000]]></SourceSidebarWidth>
         <uid><![CDATA[2655DDB9-E114-4544-A031-D4C7F2E701C7]]></uid>
-        <windowHeight><![CDATA[1023.000000]]></windowHeight>
-        <windowLocationX><![CDATA[935.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[4.000000]]></windowLocationY>
-        <windowScrollOrigin><![CDATA[{0, 0}]]></windowScrollOrigin>
-        <windowWidth><![CDATA[745.000000]]></windowWidth>
+        <windowHeight><![CDATA[678.000000]]></windowHeight>
+        <windowLocationX><![CDATA[2126.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[702.000000]]></windowLocationY>
+        <windowScrollOrigin><![CDATA[{0, 4}]]></windowScrollOrigin>
+        <windowWidth><![CDATA[1000.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>
     <containerName><![CDATA[model controller orginal container]]></containerName>
