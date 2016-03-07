@@ -25,6 +25,16 @@ public class Band {
     }
   }
 
+  public void save() {
+    String sql = "INSERT INTO bands (name) VALUES (:name)";
+    try(Connection con = DB.sql2o.open()) {
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("name", name)
+        .executeUpdate()
+        .getKey();
+    }
+  }
+
   @Override
   public boolean equals(Object otherBand) {
     if (!(otherBand instanceof Band)) {

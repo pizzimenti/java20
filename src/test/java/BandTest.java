@@ -19,14 +19,14 @@ public class BandTest {
     assertTrue(newBand.equals(anotherBand));
   }
 
-  // @Test
-  // public void save_returnTrueIfNamesAreSame() {
-  //   Band newBand = new Band("Cold Play");
-  //   newBand.save();
-  //   Band savedBand = Band.all().get(0);
-  //   assertEquals(newBand.getId(), savedBand.getId());
-  // }
-  //
+  @Test
+  public void save_returnTrueIfNamesAreSame() {
+    Band newBand = new Band("Cold Play");
+    newBand.save();
+    Band savedBand = Band.all().get(0);
+    assertEquals(newBand.getId(), savedBand.getId());
+  }
+
   // @Test
   // public void find_findsObjectInDatabaseById() {
   //   Band newBand = new Band("Cold Play");
