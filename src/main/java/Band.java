@@ -35,6 +35,15 @@ public class Band {
     }
   }
 
+  public static Band find(int id) {
+    String sql = "SELECT * FROM bands WHERE id=:id";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql)
+        .addParameter("id",id)
+        .executeAndFetchFirst(Band.class);
+    }
+  }
+
   @Override
   public boolean equals(Object otherBand) {
     if (!(otherBand instanceof Band)) {

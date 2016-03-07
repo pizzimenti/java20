@@ -27,14 +27,14 @@ public class BandTest {
     assertEquals(newBand.getId(), savedBand.getId());
   }
 
-  // @Test
-  // public void find_findsObjectInDatabaseById() {
-  //   Band newBand = new Band("Cold Play");
-  //   newBand.save();
-  //   Band savedBand = Band.find(newBand.getId());
-  //   assertTrue(newBand.equals(savedBand));
-  // }
-  //
+  @Test
+  public void find_findsObjectInDatabaseById() {
+    Band newBand = new Band("Cold Play");
+    newBand.save();
+    Band savedBand = Band.find(newBand.getId());
+    assertTrue(newBand.equals(savedBand));
+  }
+  
   // @Test
   // public void addVenue_addsVenueToBand() {
   //   Venue myVenue = new Venue("Rose Quarter");
