@@ -68,6 +68,6 @@ public class BandTest {
     myBand.save();
     myBand.addVenue(myVenue.getId());
     myBand.deleteVenues();
-    assertEquals(0, myVenue.getBands().size());
+    assertEquals(0, myBand.getVenues().size());
   }
 }
