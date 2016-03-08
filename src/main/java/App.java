@@ -85,26 +85,37 @@ public class App {
       return null;
     });
 
-    // get("/add-inventory")
-    //
-    // int bandId = Integer.parseInt(request.queryParams("band-existing"));
-    //   Copy newCopy = new Copy(int bandId);
-    //   int qty = 25;
-    //   newCopy.addInventory(qty);
+    get("/band/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("bands", Band.all());
+      model.put("venues", Venue.all());
+      model.put("template", "templates/band.vtl");
 
-    // get("/band/:id", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   model.put("bands", Band.all());
-    //   model.put("venues", Venue.all());
-    //   model.put("template", "templates/band.vtl");
-    //
-    //   Band band = Band.find(Integer.parseInt(request.params(":id")));
-    //   List<Venue> venueList = band.getVenues();
-    //   model.put("band", band);
-    //   model.put("venueList", venueList);
-    //   return new ModelAndView (model, layout);
-    // }, new VelocityTemplateEngine());
-    //
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
+      List<Venue> venueList = band.getVenues();
+      model.put("band", band);
+      model.put("venueList", venueList);
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/band/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+
+      String newBandName = request.queryParams("band-name");
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
+      band.setName(newBandName);
+      band.updateName();
+
+      model.put("bands", Band.all());
+      model.put("venues", Venue.all());
+      model.put("template", "templates/band.vtl");
+
+      model.put("band", band);
+      List<Venue> venueList = band.getVenues();
+      model.put("venueList", venueList);
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
   } //end of main
   public static void addBandAndVenue(int bandId, int venueId) {
     String sql = "INSERT INTO bands_venues (band_id, venue_id) VALUES (:band_id, :venue_id);";

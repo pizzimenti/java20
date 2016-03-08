@@ -18,6 +18,20 @@ public class Band {
     return name;
   }
 
+  public void setName(String newName) {
+    name = newName;
+  }
+
+  public void updateName() {
+    String sql = "UPDATE bands SET name=:newName WHERE id=:id";
+    try(Connection con = DB.sql2o.open()) {
+      con.createQuery(sql)
+      .addParameter("newName", name)
+      .addParameter("id", id)
+      .executeUpdate();
+    }
+  }
+
   public static List<Band> all() {
     String sql = "SELECT * FROM bands";
     try(Connection con = DB.sql2o.open()) {

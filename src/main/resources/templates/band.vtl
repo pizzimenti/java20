@@ -1,0 +1,19 @@
+<h2>$band.getName()</h2>
+
+<h4>Edit $band.getName()'s Name</h4>
+
+<form action="/band/$band.getId()" method="post">
+  <div class="form-group">
+    <input required value="$band.getName()" type="text" class="form-control" name="band-name" id="band">
+  </div>
+  <button class="btn btn-default" type="submit">Update Band Name</button>
+</form>
+
+  <h4>Upcoming Shows:</h4>
+  <ul>
+    #foreach($venue in $venueList)
+      <li>$venue.getName()</li>
+    #end
+  </ul>
+
+  <a href="/delete-band/$band.getId()"><button class="btn btn-danger delete">Delete This Band</button></a>
