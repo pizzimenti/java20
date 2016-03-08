@@ -69,6 +69,15 @@ public class Band {
     }
   }
 
+  public void deleteVenues() {
+    String sql = "DELETE FROM bands_venues WHERE band_id=:id";
+    try (Connection con = DB.sql2o.open()) {
+      con.createQuery(sql)
+        .addParameter("id", id)
+        .executeUpdate();
+    }
+  }
+
   @Override
   public boolean equals(Object otherBand) {
     if (!(otherBand instanceof Band)) {
