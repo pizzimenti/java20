@@ -106,13 +106,36 @@ public class App {
       band.setName(newBandName);
       band.updateName();
 
+      List<Venue> venueList = band.getVenues();
+      model.put("venues", Venue.all());
+      model.put("bands", Band.all());
+      model.put("template", "templates/band.vtl");
+      model.put("band", band);
+      model.put("venueList", venueList);
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/delete-band/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
       model.put("bands", Band.all());
       model.put("venues", Venue.all());
-      model.put("template", "templates/band.vtl");
+      model.put("template", "templates/delete-band.vtl");
 
-      model.put("band", band);
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
       List<Venue> venueList = band.getVenues();
+      model.put("band", band);
       model.put("venueList", venueList);
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/delete-band/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
+      band.deleteBand();
+
+      model.put("bands", Band.all());
+      model.put("venues", Venue.all());
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
