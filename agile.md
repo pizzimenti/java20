@@ -2,16 +2,16 @@
 
 Back-end Logic
 
-  Band
+#  Band
     create
     read
       all
       singlular
     update
-    destroy
-      all
+#    destroy
+#      all
       singlular
-  Venue
+#  Venue
     create
 
   Band/Venue Join
