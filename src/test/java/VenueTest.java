@@ -47,21 +47,19 @@ public class VenueTest {
     assertTrue(myBand.equals(savedBand));
   }
 
-  // @Test
-  // public void getVenues_getsVenuesFromVenue() {
-  //   Venue myVenue = new Venue("Rose Quarter");
-  //   myVenue.save();
-  //   Venue myVenueTwo = new Venue("Expo Center");
-  //   myVenueTwo.save();
-  //   Venue myVenue = new Venue("Rose Quarter");
-  //   myVenue.save();
-  //   Venue myVenueTwo = new Venue("Pink Martini");
-  //   myVenueTwo.save();
-  //   myVenue.addVenue(myVenue.getId());
-  //   myVenue.addVenue(myVenue.getId());
-  //   List savedVenues = myVenue.getVenues();
-  //   assertEquals(savedVenues.size(), 2);
-  // }
+  @Test
+  public void getBands_getsBandsFromVenue() {
+    Venue myVenue = new Venue("Rose Quarter");
+    myVenue.save();
+    Band myBand = new Band("Coldplay");
+    myBand.save();
+    Band myBandTwo = new Band("Pink Martini");
+    myBandTwo.save();
+    myVenue.addBand(myBand.getId());
+    myVenue.addBand(myBandTwo.getId());
+    List savedBands = myVenue.getBands();
+    assertEquals(2, savedBands.size());
+  }
   //
   // @Test
   // public void deleteVenues_DeleteAllVenuesFromVenue() {
