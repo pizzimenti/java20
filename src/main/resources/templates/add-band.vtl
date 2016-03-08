@@ -1,0 +1,20 @@
+<h2>Add a band:</h2>
+
+<form action="/add-band" method="post">
+  <div class="form-group">
+    <input required placeholder="New Band Name" type="text" class="form-control" name="band" id="band">
+  </div>
+  <select required id="venue" name="venue" class="form-control" type="text">
+        <option value="" disabled="disabled" selected="true">Choose a Venue</option>
+      #foreach($venue in $venues)
+        <option value="$venue.getId()">$venue.getName()</option>
+      #end
+  </select>
+  <button id="submit-band" type="submit" class="btn btn-info">Submit Band</button>
+</form>
+<h4>Bands in Database:</h4>
+<ul>
+  #foreach($band in $bands)
+    <li>$band.getName()</li>
+  #end
+</ul>

@@ -31,8 +31,8 @@
           <h4>$listVenueName</h4>
           #end
           <ul>
-            #foreach ($venue in $venues)
-            <a href="/venue/$venue.getId()"><li>$venue.getBandName()</li></a>
+            #foreach ($band in $bands)
+            <a href="/band/$band.getId()"><li>$band.getName()</li></a>
             #end
           </ul>
 

@@ -1,0 +1,33 @@
+<h2>Add a Venue</h2>
+
+<form action="/add-venue" method="post">
+  <div class="form-group">
+    <input required placeholder="Venue Name" type="text" class="form-control" name="venue" id="venue-name">
+  </div>
+  <button type="submit" id="submit-venue" class="btn btn-info">Submit Venue</button>
+</form>
+
+<h2>Add Venue to Band</h2>
+<form action="/add-venue-to-band" method="post">
+  <select required id="venue-existing" name="venue-existing" class="form-control" type="text">
+        <option value="" disabled="disabled" selected="true">Choose a Venue</option>
+      #foreach($venue in $venues)
+      <option value="$venue.getId()">$venue.getName()</option>
+    #end
+  </select>
+  <select required id="band-existing" name="band-existing" class="form-control" type="text">
+    <option value="" disabled="disabled" selected="true">Choose a Band</option>
+    #foreach($band in $bands)
+    <option value="$band.getId()">$band.getName()</option>
+    #end
+  </select>
+  <button type="submit" id="submit-venue-to-band" class="btn btn-info">Submit as Venue of Selected Band</button>
+</form>
+
+
+  <h4>Venues in Database:</h4>
+  <ul>
+    #foreach($venue in $venues)
+      <li>$venue.getName()</li>
+    #end
+  </ul>
