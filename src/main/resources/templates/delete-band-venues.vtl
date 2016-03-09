@@ -1,0 +1,18 @@
+<h2>Delete $band.getName()'s Upcoming Shows'?</h2>
+
+<div id="center-warn">
+  <h3>Warning!</h3>
+  <p>This will permanently delete $band.getName()'s upcoming shows!</p>
+  <h5>Are you sure you wish to do this?</h5>
+  <form action="/delete-band-venues/$band.getId()" method="post">
+    <button class="btn btn-danger" type="submit">Delete $band.getName()'s Shows</button>
+  </form>
+  <a href="javascript:history.back()"><button class="btn btn-info">Cancel</button></a>
+</div>
+
+<h4>Upcoming Shows:</h4>
+<ul>
+  #foreach($venue in $venueList)
+  <li>$venue.getName()</li>
+  #end
+</ul>

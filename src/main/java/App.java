@@ -139,6 +139,30 @@ public class App {
       return new ModelAndView (model, layout);
     }, new VelocityTemplateEngine());
 
+    get("/delete-band-venues/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("bands", Band.all());
+      model.put("venues", Venue.all());
+      model.put("template", "templates/delete-band-venues.vtl");
+
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
+      List<Venue> venueList = band.getVenues();
+      model.put("band", band);
+      model.put("venueList", venueList);
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/delete-band-venues/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+
+      Band band = Band.find(Integer.parseInt(request.params(":id")));
+      band.deleteVenues();
+
+      model.put("bands", Band.all());
+      model.put("venues", Venue.all());
+      return new ModelAndView (model, layout);
+    }, new VelocityTemplateEngine());
+
   } //end of main
   public static void addBandAndVenue(int bandId, int venueId) {
     String sql = "INSERT INTO bands_venues (band_id, venue_id) VALUES (:band_id, :venue_id);";

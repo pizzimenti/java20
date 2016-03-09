@@ -161,6 +161,7 @@ ALTER TABLE ONLY venues ALTER COLUMN id SET DEFAULT nextval('venues_id_seq'::reg
 COPY bands (id, name) FROM stdin;
 89	The Who
 91	Pink Martini
+92	Iron and Wine
 \.
 
 
@@ -168,7 +169,7 @@ COPY bands (id, name) FROM stdin;
 -- Name: bands_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brad
 --
 
-SELECT pg_catalog.setval('bands_id_seq', 91, true);
+SELECT pg_catalog.setval('bands_id_seq', 92, true);
 
 
 --
@@ -215,8 +216,9 @@ COPY bands_venues (id, band_id, venue_id) FROM stdin;
 73	86	90
 76	89	94
 77	89	95
-79	91	94
-80	91	95
+81	92	96
+82	91	96
+83	91	94
 \.
 
 
@@ -224,7 +226,7 @@ COPY bands_venues (id, band_id, venue_id) FROM stdin;
 -- Name: bands_venues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brad
 --
 
-SELECT pg_catalog.setval('bands_venues_id_seq', 80, true);
+SELECT pg_catalog.setval('bands_venues_id_seq', 83, true);
 
 
 --
@@ -234,6 +236,7 @@ SELECT pg_catalog.setval('bands_venues_id_seq', 80, true);
 COPY venues (id, name) FROM stdin;
 94	Rose Quarter
 95	Expo Center
+96	Tiffany Center
 \.
 
 
@@ -241,7 +244,7 @@ COPY venues (id, name) FROM stdin;
 -- Name: venues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: brad
 --
 
-SELECT pg_catalog.setval('venues_id_seq', 95, true);
+SELECT pg_catalog.setval('venues_id_seq', 96, true);
 
 
 --
